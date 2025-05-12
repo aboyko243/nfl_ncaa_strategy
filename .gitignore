@@ -49,4 +49,5 @@ po/*~
 rsconnect/
 
 # Large Data Files
-data/raw/
+data/raw/ncaa_data.csv
+data/raw/nfl_data.csv
