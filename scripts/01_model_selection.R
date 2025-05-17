@@ -5,7 +5,7 @@ library(caret)
 library(MASS)
 
 # load data ----
-combined_data <- read_csv("data/cleaned/combined_data.csv")
+load("data/cleaned/combined_data.rda")
 
 # remove id variables (not needed for regression, but useful later)
 modeling_data <- combined_data %>%

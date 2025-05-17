@@ -132,6 +132,7 @@ combined_data <- cleaned_nfl_data %>%
   bind_rows(cleaned_ncaa_data %>% mutate(id = "ncaa")) %>%
   relocate(id)
 
+combined_data$id <- factor(combined_data$id, labels = c("ncaa", "nfl"), levels = c("ncaa", "nfl"))
 combined_data$down <- factor(combined_data$down, labels = c("1", "2", "3", "4"), levels = c("1", "2", "3", "4"))
 combined_data$play_type <- factor(combined_data$play_type, labels = c("run", "pass"), levels = c("run", "pass"))
 combined_data$distance <-  factor(combined_data$distance, labels = c("short", "medium", "long"), levels = c("short", "medium", "long"))
